@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.mohammadibrahim.testdatabase.AddNewContect">
+
+
+<Button
+    android:id="@+id/btSearch"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="80dp"
+    android:layout_marginLeft="150dp"
+    android:text="@string/search" android:layout_marginStart="150dp" />
+
+
+<EditText
+    android:id="@+id/etSearch"
+    android:layout_width="43dp"
+    android:layout_height="wrap_content"
+    android:layout_alignEnd="@+id/btSearch"
+    android:layout_alignLeft="@+id/btSearch"
+    android:layout_alignRight="@+id/btSearch"
+    android:layout_alignStart="@+id/btSearch"
+    android:gravity="center" android:inputType="" />
+
+<TextView
+    android:id="@+id/tvname"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="150dp"
+    android:layout_marginTop="200dp"
+    android:hint="@string/view_name" android:layout_marginStart="150dp" />
+<TextView
+    android:id="@+id/tvemail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="150dp"
+    android:layout_marginTop="250dp"
+    android:hint="@string/view_email" android:layout_marginStart="150dp" />
+</RelativeLayout>

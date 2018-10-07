@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+.s3 { color: rgb(128,128,128); font-style: italic; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+MainActivity.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.example.mohammadibrahim.phone_dialer; 
+ 
+</span><span class="s0">import </span><span class="s1">android.Manifest; 
+</span><span class="s0">import </span><span class="s1">android.content.Intent; 
+</span><span class="s0">import </span><span class="s1">android.content.pm.PackageManager; 
+</span><span class="s0">import </span><span class="s1">android.net.Uri; 
+</span><span class="s0">import </span><span class="s1">android.support.v4.app.ActivityCompat; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.app.AppCompatActivity; 
+</span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.widget.Button; 
+</span><span class="s0">import </span><span class="s1">android.widget.EditText; 
+</span><span class="s0">import </span><span class="s1">android.widget.Toast; 
+ 
+</span><span class="s0">public class </span><span class="s1">MainActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity { 
+    Button btnone; 
+    Button btntwo; 
+    Button btnthree; 
+    Button btnfour; 
+    Button btnfive; 
+    Button btnsix; 
+    Button btnseven; 
+    Button btneight; 
+    Button btnnine; 
+    Button btnstar; 
+    Button btnzero; 
+    Button btnhashaTag; 
+    Button btnDelete; 
+    Button btnDial; 
+    EditText input; 
+ 
+ 
+    @Override 
+    </span><span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) { 
+        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+        setContentView(R.layout.activity_main); 
+        Button btnone = (Button) findViewById(R.id.buttonone); 
+        Button btntwo = (Button) findViewById(R.id.buttontwo); 
+        Button btnthree = (Button) findViewById(R.id.buttonthree); 
+        Button btnfour = (Button) findViewById(R.id.buttonfour); 
+        Button btnfive = (Button) findViewById(R.id.buttonfive); 
+        Button btnsix = (Button) findViewById(R.id.buttonsix); 
+        Button btnseven = (Button) findViewById(R.id.buttonseven); 
+        Button btneight = (Button) findViewById(R.id.buttoneight); 
+        Button btnnine = (Button) findViewById(R.id.buttonnine); 
+        Button btnstar = (Button) findViewById(R.id.buttonstar); 
+        Button btnhashTag = (Button) findViewById(R.id.buttonhash); 
+        Button btnDelete = (Button) findViewById(R.id.buttondelete); 
+        Button btnDial = (Button) findViewById(R.id.buttondial); 
+ 
+        input = (EditText) findViewById(R.id.editText); 
+ 
+        btnDial.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+                String number=input.getText().toString(); 
+                Intent callintent=</span><span class="s0">new </span><span class="s1">Intent(Intent.ACTION_CALL); 
+                callintent.setData(Uri.parse(</span><span class="s2">&quot;tel:&quot;</span><span class="s1">+number)); 
+                startActivity(callintent); 
+            } 
+        }); 
+ 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">one(View v) { 
+        onButtonClick(btnone, input, </span><span class="s2">&quot;1&quot;</span><span class="s1">); 
+ 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">two(View v) { 
+        onButtonClick(btntwo, input, </span><span class="s2">&quot;2&quot;</span><span class="s1">); 
+ 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">three(View v) { 
+        onButtonClick(btnthree, input, </span><span class="s2">&quot;3&quot;</span><span class="s1">); 
+ 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">four(View v) { 
+        onButtonClick(btnfour, input, </span><span class="s2">&quot;4&quot;</span><span class="s1">); 
+ 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">five(View v) { 
+        onButtonClick(btnfive, input, </span><span class="s2">&quot;5&quot;</span><span class="s1">); 
+ 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">six(View v) { 
+        onButtonClick(btnsix, input, </span><span class="s2">&quot;6&quot;</span><span class="s1">); 
+ 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">seven(View v) { 
+        onButtonClick(btnseven, input, </span><span class="s2">&quot;7&quot;</span><span class="s1">); 
+ 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">eight(View v) { 
+        onButtonClick(btneight, input, </span><span class="s2">&quot;8&quot;</span><span class="s1">); 
+ 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">nine(View v) { 
+        onButtonClick(btnnine, input, </span><span class="s2">&quot;9&quot;</span><span class="s1">); 
+ 
+ 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">star(View v) { 
+        onButtonClick(btnstar, input, </span><span class="s2">&quot;*&quot;</span><span class="s1">); 
+ 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">zero(View v) { 
+        onButtonClick(btnzero, input, </span><span class="s2">&quot;0&quot;</span><span class="s1">); 
+ 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">hashTag(View v) { 
+        onButtonClick(btnhashaTag, input, </span><span class="s2">&quot;#&quot;</span><span class="s1">); 
+ 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">onDelete(View v) { 
+        input.setText(</span><span class="s2">&quot;&quot;</span><span class="s1">); 
+ 
+    } 
+ 
+    </span><span class="s3">/*public void dial(View v) { 
+        String number = input.getText().toString(); 
+        if (input.getText().length() &lt;= 3) { 
+            Toast.makeText(this, &quot;Please Enter Valid Number&quot; , Toast.LENGTH_LONG).show(); 
+ 
+        } else { 
+            Intent intent = new Intent(Intent.ACTION_CALL); 
+            String hashTag = input.getText().toString(); 
+            if (hashTag.contains(&quot;#&quot;)) { 
+                hashTag.replace(&quot;#&quot;, &quot;#23&quot;); 
+ 
+            } 
+            intent.setData(Uri.parse(&quot;Tel:&quot; + hashTag )); 
+ 
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) { 
+ 
+                return ; 
+            }else { 
+                intent.setData(Uri.parse(&quot;Tel:&quot; + number)); 
+                startActivity(intent); 
+            } 
+ 
+        } 
+ 
+    }*/</span><span class="s1"> 
+    </span><span class="s0">public void </span><span class="s1">onButtonClick(Button button,EditText inputNumber,String number){ 
+        String cache= input.getText().toString(); 
+        inputNumber.setText(cache+number); 
+    } 
+ 
+ 
+} 
+</span></pre>
+</body>
+</html>

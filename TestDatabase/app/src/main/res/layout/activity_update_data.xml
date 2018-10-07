@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mohammadibrahim.testdatabase.UpdateData">
+    <EditText
+        android:id="@+id/etupdatephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Old Phone#"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/etupdatename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your New Name"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="120dp"/>
+
+    <EditText
+        android:id="@+id/etupdatemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your New Email"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="200dp"/>
+
+    <Button
+        android:id="@+id/btupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="360dp"/>
+
+</RelativeLayout>
